@@ -1,0 +1,388 @@
+/* Reset CSS básico */
+
+/* Selector universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el tamaño especificado incluya el relleno y el borde */
+}
+
+/* Establece un tamaño de fuente base para una mejor consistencia */
+html {
+    font-size: 16px; /* Tamaño base de la fuente (ajusta según tus preferencias) */
+}
+
+/* Evita que los elementos en línea creen espacios adicionales */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre {
+    margin: 0;
+    padding: 0;
+}
+
+/* Evita que los elementos de lista pierdan el estilo de lista */
+ul, ol {
+    list-style: none;
+}:root {
+    --color-nav: #ffffff; /* Color para la barra de navegación */
+    --color-fondo: #f2f2f2; /* Color de fondo general */
+    --color-fondo2:rgb(7, 7, 7)2; /* Color de fondo general */
+    --color-primario: #3498db; /* Color primario */
+    --color-secundario: #d8800e; /* Color secundario */
+    --color-secundario2: #54c409; /* Color secundario */
+    --color-texto: #333333; /* Color de texto principal */
+}
+
+
+
+body{
+
+   box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    header{
+        background:linear-gradient(var(--color-texto),var(--color-primario));
+        width: 100%;
+        height: 8em;
+        top: 0;
+        position: fixed;
+        
+        text-align: center;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 1px 2px rgb(rgb(88, 86, 86), rgb(219, 219, 219), rgb(52, 52, 80));
+        color: var(--color-nav);
+           span{
+               color: var(--color-secundario);
+           }
+       }
+    
+
+
+  main{
+    background-color: #333333;
+    color: #f2f2f2;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 12.5em;
+    border: 1px solid var(--color-primario);
+    border-radius: 0.8em;
+    margin-bottom: 2em;
+.contenedor{
+    background-color: #858585;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    overflow:auto;
+    margin-bottom: 0em;
+     img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+
+    }
+}
+}
+
+footer{
+    margin-top: 10em;
+    height: 6em;
+    background:linear-gradient(var(--color-texto),var(--color-texto));
+    color: var(--color-fondo2);
+    text-align: center;
+    margin-bottom: 0em;
+    padding: 10px 0; 
+    color: var(--color-fondo);
+    
+    i{
+        color: var(--color-fondo);
+
+        font-size: 1.8em;
+
+    }
+}
+}
+
+.nav{
+    background-color: var(--color-primario);
+    width: 100%;
+    position: fixed;
+    top: 6em;
+    margin-top: 2em;
+    margin-bottom: 18em;
+    padding-bottom: 2em;
+    
+    ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0.1em;
+    
+        li{
+             /* Margen entre elementos de lista */
+             list-style-type: none;
+             margin: 0.3em 3.2em;  
+             padding: 0.1em;  
+             transition: background-color 0.3s ease; 
+             a{
+                border-radius: 0.2em;
+                text-decoration: none;
+                flex-direction: row;
+                color: var(--color-fondo);
+                padding: 1em;
+                
+            }
+        }
+    }
+    
+}
+li a:hover{
+    padding: 1em;
+    background-color: var(--color-secundario);
+    box-shadow: 1px 1px 0.1em 0.1em var(--color-nav);
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+} 
+
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.business-info{
+    width: 100%;
+    overflow: auto;
+    img{
+        width: 100%;
+        object-fit: cover;
+
+    }
+}
+
+/* *********formulario  */
+.mein{
+    margin-top: 14em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+    width: 40%;
+    height: 76vh;
+    background-color: var(--color-texto);
+    box-sizing: border-box;
+    border-radius: 0.4em;
+    box-shadow: 0em 0em 1.7em 0.8em var(--color-secundario);
+
+}
+.container-form{
+    width: 100%;
+    color: var(--color-fondo);
+    padding-top: 0.2em;
+    input,label,bottom{
+        display: block;
+        padding: 0.4em;
+        border-radius: 0.5em;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+#registroForm{
+    width: 100%;
+    text-align: center;
+    margin: 0.2em 0;
+
+}
+
+
+@media (max-width:794px) {
+    
+.nav{
+    background-color: var(--color-primario);
+    width: 100%;
+    position: fixed;
+    top: 6em;
+    margin-top: 2em;
+    margin-bottom: 28em;
+    padding-bottom: 2em;
+    
+    ul{
+        display: block;
+        justify-content: center;
+        width: 100%;
+        /* flex-wrap: wrap; */
+        padding: 1.1em;
+    
+        li{
+             /* Margen entre elementos de lista */
+             list-style-type: none;
+             margin: 1.3em 3.2em;  
+             padding: 0.1em;  
+             transition: background-color 0.3s ease; 
+             text-align: center;
+             a{
+                border-radius: 0.2em;
+                text-decoration: none;
+                flex-direction: column;
+                color: var(--color-fondo);
+                padding: 1em;
+                
+            }
+        }
+    }
+    
+}
+li a:hover{
+    padding: 1em;
+    background-color: var(--color-secundario);
+    box-shadow: 1px 1px 0.1em 0.1em var(--color-nav);
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+} 
+
+.container{
+    margin-top:  24.5em;
+}
+.main-productos{
+    margin-top: 24.5em;
+}
+.mein{
+    margin-top: 24.5em;
+}
+
+
+/* *********formulario  */
+.mein{
+    margin-top: 24.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+    width: 52%;
+    height: 86vh;
+    background-color: var(--color-texto);
+    box-sizing: border-box;
+    border-radius: 0.4em;
+    box-shadow: 0em 0em 1.7em 0.8em var(--color-secundario);
+
+}
+.container-form{
+    width: 100%;
+    color: var(--color-fondo);
+    padding-top: 1.2em;
+    input,label,bottom{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.3em;
+        border-radius: 0.5em;
+        box-sizing: border-box;
+      
+        margin-top: 0.2em;
+    }
+}
+#registroForm{
+    width: 100%;
+    text-align: center;
+
+}
+
+
+}
+
+
+
+
+@media (max-width:394px) {
+    
+    .nav{
+        background-color: var(--color-primario);
+        width: 100%;
+        position: fixed;
+        top: 6em;
+        margin-top: 1em;
+        margin-bottom: 28em;
+        padding-bottom: 1em;
+        
+        ul{
+            display: block;
+            justify-content: center;
+            width: 100%;
+            /* flex-wrap: wrap; */
+            padding: 1.1em;
+        
+            li{
+                 /* Margen entre elementos de lista */
+                 list-style-type: none;
+                 margin: 1.3em 3.2em;  
+                 padding: 0.1em;  
+                 transition: background-color 0.3s ease; 
+                 text-align: center;
+                 a{
+                    border-radius: 0.2em;
+                    text-decoration: none;
+                    flex-direction: column;
+                    color: var(--color-fondo);
+                    padding: 1em;
+                    
+                }
+            }
+        }
+        
+    }
+    li a:hover{
+        padding: 1em;
+        background-color: var(--color-secundario);
+        box-shadow: 1px 1px 0.1em 0.1em var(--color-nav);
+        transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    } 
+    
+    .container{
+        margin-top:  24.5em;
+    }
+    .main-productos{
+        margin-top: 24.5em;
+    }
+    .mein{
+        margin-top: 24.5em;
+    }
+    
+    
+    /* *********formulario  */
+    .mein{
+        margin-top: 24em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: auto;
+        width: 52%;
+        height: 86vh;
+        background-color: var(--color-texto);
+        box-sizing: border-box;
+        border-radius: 0.4em;
+        box-shadow: 0em 0em 1.7em 0.8em var(--color-secundario);
+    
+    }
+    .container-form{
+        width: 100%;
+        color: var(--color-fondo);
+        padding-top: 1.2em;
+        input,label,bottom{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0.2em;
+            padding: 0.3em;
+            border-radius: 0.5em;
+            box-sizing: border-box;
+            width: 85%;
+          
+            margin-top: 0.2em;
+        }
+    }
+    #registroForm{
+        width: 100%;
+        text-align: center;
+    
+    }
+    
+    
+    }

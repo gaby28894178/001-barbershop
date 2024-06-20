@@ -1,0 +1,267 @@
+/* Reset CSS */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Margin and padding reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+figure,
+blockquote,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/* Variables CSS y Fuentes */
+:root {
+  --blanco: #f9f9f9;
+  --green: #050505;
+  --green-light: #0c0d0d;
+  --negro: #36383f;
+  --grey: #85888c;
+  --verde: green;
+  --rojo: red;
+  --base: #000;
+  --fondo: rgba(41, 38, 34, 0.067);
+  --fondo2: rgb(206, 80, 245);
+}
+
+body {
+  font-family: "DM Serif Display", serif;
+  background-color: var(--blanco);
+}
+
+.rozha-one-regular {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Estilos Comunes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span {
+  color: var(--fondo2);
+}
+
+main {
+  width: 100%;
+  margin-top: 15em;
+}
+.espacio {
+  margin-top: 25em;
+}
+a {
+  text-decoration: none;
+}
+/* esconder div  */
+.hidden {
+  display: none;
+}
+
+/* Productos Filter */
+.productos-filter {
+  position: absolute;
+  top: 22em;
+  left: -6em;
+  width: 6.5em;
+  box-shadow: 2px 0 2px 0 #36383f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin: 0.5em;
+  padding: 1.5em;
+  border-radius: 3px;
+  background-color: #36383f;
+  transition: left 1s ease-in-out;
+  display: block;
+}
+
+.productos-filter:hover {
+  left: -0.5em;
+}
+
+/* Select */
+select {
+  background-color: #8b04fa;
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0.5em -0.5em 0.5em 0;
+  margin-left: -1em;
+}
+
+/* Header y Navegación */
+.header {
+  background: linear-gradient(to right, rgb(8, 8, 8), rgb(22, 22, 22));
+  box-shadow: 1px 1px 5px 0 var(--grey);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 5em;
+  z-index: 2222;
+}
+
+.logo {
+  display: inline-block;
+  color: var(--blanco);
+  font-size: 60px;
+  margin-left: 10px;
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  background-color: var(--base);
+  height: 83px;
+}
+
+.side-menu:checked ~ nav {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+.menu a {
+  display: block;
+  padding: 30px;
+  color: var(--blanco);
+}
+
+.menu a:hover {
+  background-color: var(--green-light);
+  color: var(--blanco);
+}
+
+/* Media Queries */
+@media (min-width: 559px) {
+  .nav {
+    max-height: initial;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .side-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 558px) {
+  span {
+    color: #a651eb;
+  }
+
+  .header {
+    background-color: #000;
+    margin-bottom: 2em;
+  }
+
+  .hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 50px;
+  }
+
+  .hamb-line {
+    background-color: rgb(255, 255, 255);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    margin: 12px;
+    top: -8em;
+    pointer-events: auto;
+  }
+
+  .hamb-line:hover {
+    cursor: pointer;
+  }
+
+  .hamb-line::after,
+  .hamb-line::before {
+    background-color: rgb(241, 241, 241);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.1s ease-out;
+    width: 100%;
+  }
+
+  .hamb-line::before {
+    top: -10px;
+  }
+
+  .hamb-line::after {
+    top: 10px;
+  }
+
+  .side-menu {
+    display: none;
+  }
+
+  .side-menu:checked ~ nav {
+    max-height: 100%;
+    height: auto;
+  }
+
+  .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+
+  .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .nav {
+    background: linear-gradient(to right, var(--base), var(--fondo));
+  }
+}
+
+@media (max-width: 394px) {
+  span{
+    color: yellow;
+  }
+  .logo{
+    font-size: 3em;
+    margin-left: 0.8em;
+  }
+  
+  
+}

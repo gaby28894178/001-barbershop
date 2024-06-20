@@ -1,0 +1,33 @@
+:root {
+    --cards: #d4d4d4;
+    --fuente-cards: #050505;
+    --green-light: #0c0d0d;
+    --negro: #36383f;
+    --body: #fcf9f9;
+    --verde: green;
+    --rojo: red;
+    --base: #000;
+    --fondo: rgba(41, 38, 34, 0.067);
+    --fondo2: rgb(206, 80, 245);
+  }
+  
+/* contenedor de card */
+.card-container{
+  width: 100%;
+  height: 100hv;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.card{
+  border: 1px solid var(--rojo);
+  margin: 2em;
+img{
+  width: 12em;
+}
+
+}
